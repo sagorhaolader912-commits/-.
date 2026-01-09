@@ -1,0 +1,11 @@
+import streamlit as st
+
+st.title("মাছের আড়ত ও কোম্পানি হিসাব")
+st.write("স্বাগতম! আপনার হিসাব এখানে শুরু করুন।")
+
+# একটি সাধারণ ইনপুট ফর্ম
+name = st.text_input("আড়ত বা কোম্পানির নাম")
+amount = st.number_input("টাকার পরিমাণ", min_value=0)
+
+if st.button("সেভ করুন"):
+    st.success(f"{name} এর জন্য {amount} টাকা সেভ হয়েছে!")
